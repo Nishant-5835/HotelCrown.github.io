@@ -1,0 +1,375 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ .nav-item {
+    padding: 20px;
+} 
+
+:root {
+    /* Background Color */
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+
+    /* text style */
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+.main-btn {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0.0625rem solid var(--primary-color);
+    padding: 7px 20px;
+    border-radius: 3.125rem;
+    line-height: 1.75rem;
+    display: inline-block;
+    transition: all 0.3s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+.navbar-collapse ul li a.nav-link:hover,
+.navbar-collapse ul li a.active .nav-link {
+    color: var(--secondary-color);
+    transition: 0.5s;
+
+}
+
+/* booking */
+.booking-area {
+    background-color: var(--text-white);
+    box-shadow: 0.625rem .9375rem 0 rgb(0 0 0 /10%);
+    margin-top: -4rem;
+    padding: 3.125rem 1.875rem;
+    position: relative;
+    z-index: 9999;
+}
+
+/* about */
+.about{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    padding-top:40px;
+}
+
+.about h3 {
+    font-weight: 700;
+}
+
+.about p {
+    color: var(#777);
+    text-align: justify;
+}
+
+span {
+    color: var(--secondary-text);
+}
+
+/*  room */
+
+.room-items {
+    position: relative;
+    overflow: hidden;
+}
+
+.room-items img {
+    width: 100%;
+    -webkit-transition: all 400ms ease-in 0s;
+    transition: all 400ms ease-in 0s;
+    background-color: var(--bg-black);
+}
+
+.room-items:hover img {
+    border-radius: 15px;
+    -webkit-transform: scale3d(1.10, 1.100, 1.10);
+    transform: scale3d(1.10, 1.10, 1.10);
+}
+
+.room-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-black);
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all 400ms ease-in 0;
+    transition: all 400ms ease-in 0;
+}
+
+.room-items:hover::before {
+    opacity: 0.6;
+}
+
+.room-item-wrap {
+    position: absolute;
+    left: 1.875rem;
+    right: 1.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.room-items .room-content {
+    border: 1px solid var(--bg-white);
+    padding: 5rem 1.875rem;
+    -webkit-transform: scale3d(1.0 1.0 1.0);
+    transform: scale3d(1.0 1.0 1.0);
+    transition: all 500ms ease-in 0;
+    opacity: 0;
+}
+
+.room-items:hover .room-content {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+/* service */
+.service-item-wrap {
+    background-color: var(--bg-color);
+}
+
+.service-menu-area ul li a {
+    display: block;
+    margin-bottom: 2.8125rem;
+
+}
+
+.service-menu-area ul li a .service-icon {
+    height: 5.625rem;
+    width: 5.625rem;
+    background-color: var(--secondary-color);
+    line-height: 5.625rem;
+    text-align: center;
+    border-radius: 100%;
+    float: left;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-menu-area ul li a.service-icon:hover,
+.service-menu-area ul li a.active .service-icon {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    box-shadow: 0.125rem rgb(34 30 31 / 40%);
+}
+
+.service-menu-area ul li a p,
+.service-menu-area ul li a h5 {
+    padding-left: 6.875rem;
+    display: block;
+    text-align: left;
+
+}
+ /* Team section --> */
+ .card{
+    position: relative;
+    overflow: hidden;
+ }
+ .team-info{
+    background-color: var(--secondary-color);
+    position:absolute; 
+    width:450px; 
+    bottom: 0;
+    text-align: center;
+     padding: 1.25rem;
+    margin: -4.6875rem; 
+    transition: all 0.3s ease-in-out;
+ }
+.card:hover .team-info{
+    margin-bottom: 0;
+}
+.team-info h5,
+.team-info p{
+    color: var(--text-white);
+}
+.team-info .social-network{
+   -webkit-transition: all 0.3s ease-in-out;;
+   transition: all 0.3s ease-in-out;
+    padding: 1.25rem;
+    margin: 1.25rem -1.25rem -1.25rem;
+   background-color: var(--bg-white);
+   list-style: none;
+   display: flex;
+  justify-content: center;
+}
+.team-info .social-network li a {
+    width: 2rem;
+    padding-left: 10px;
+    margin: 10px;
+    display: block;
+    border-radius: 50%;
+    font-size: .937rem;
+   
+}
+/* price section */
+.card{
+    box-shadow:0.125rem 0.125rem  rgb(34 30 31 /40%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: var(--secondary-color);
+}
+.card:hover h3,
+.card:hover h5,
+.card:hover p{
+    color: var(--text-white);
+}
+.card:hover.main-btn{
+    color:var(--text-white);
+    border-color:var(--text-white);
+}
+
+/* footer */
+
+.footer{
+    
+    background-color:var(--bg-black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer h5{
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+    margin-top: 20px;
+}
+.footer ul li{
+     margin-bottom: .5rem;
+    list-style: none;
+}
+.contact-info li a,
+.contact-info{
+    margin-top: 10px;
+    color: var(--secondary-color);
+}
+.link_widget li a,
+.footer p{
+    color: var(--text-gray);
+    font-size: 1.0rem;
+    padding-left: 1.5rem;
+    /* position: relative; */
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+.link_widget li a::before{
+    content: '';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.link_widget li a:hover{
+    color: var(--secondary-color);
+    margin-left: .625rem;
+}
+.social-network a{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    font-size: 25px;
+    line-height: 10px;
+    display: inline-block;  
+    color: var(--secondary-color);
+    text-align: center;
+   
+}
+.copyright-section,
+.copyright-section a{
+    color: var(--secondary-text);
+    padding-bottom: 1.0rem;
+    
+}
+
+.form-control{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1100px) {
+
+    /* main-btn */
+    .main-btn {
+        padding: 5px 12px;
+    }
+
+    /* room */
+    .room-items .room-content {
+        padding: 1rem 1.875rem;
+    }
+
+    .room-items .room-content h5 {
+        font-size: 1.2rem;
+    }
+
+    .room-items .room-content p {
+        font-size: 0.75rem;
+    }
+
+    .service-menu-area ul li a p,
+    .service-menu-area ul li a h5 {
+        font-size:15px;
+       
+    }
+}
+
+@media(max-width:991px) {
+
+    /* main-btn */
+    .main-btn {
+        padding: 5px 15px;
+    }
+
+    /* room */
+    .room-items .room-content {
+        padding: 2rem 1.875rem;
+    }
+
+    .room-items .room-content h5 {
+        font-size: 1.5rem;
+    }
+
+    .room-items .room-content p {
+        font-size: 1rem;
+    }
+
+    /* team  */
+   
+
+}
